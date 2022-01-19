@@ -113,7 +113,7 @@ final class CacheItem implements CacheItemInterface
      *            
      * @return static The invoked object.
      */
-    public function set($value)
+    public function set(mixed $value)
     {
         $this->value = $value;
         
@@ -131,7 +131,7 @@ final class CacheItem implements CacheItemInterface
      *            
      * @return static The called object.
      */
-    public function expiresAt($expires)
+    public function expiresAt(?\DateTimeInterface $expires)
     {
         if ($expires instanceof DateTimeInterface) {
             $this->expires = $expires;
@@ -154,7 +154,7 @@ final class CacheItem implements CacheItemInterface
      *            
      * @return static The called object.
      */
-    public function expiresAfter($time)
+    public function expiresAfter(int|\DateInterval|null $time)
     {
         if ($time instanceof DateInterval) {
             $expires = new DateTime();

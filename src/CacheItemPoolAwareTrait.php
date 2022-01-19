@@ -6,14 +6,8 @@ use Psr\Cache\CacheItemPoolInterface;
 
 trait CacheItemPoolAwareTrait
 {
-    /**
-     * @var CacheItemPoolInterface
-     */
-    protected $cache;
+    protected CacheItemPoolInterface $cache;
 
-    /**
-     * @param CacheItemPoolInterface $cache
-     */
     public function setCachePool(CacheItemPoolInterface $cache)
     {
         $this->cache = $cache;

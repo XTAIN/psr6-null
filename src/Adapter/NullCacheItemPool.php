@@ -31,7 +31,7 @@ final class NullCacheItemPool implements CacheItemPoolInterface
      *        
      * @return CacheItemInterface
      */
-    public function getItem($key)
+    public function getItem(string $key)
     {
         if ($this->hasItem($key) !== true) {
             $this->data[$key] = new CacheItem($key, null, false);
@@ -80,7 +80,7 @@ final class NullCacheItemPool implements CacheItemPoolInterface
      *        
      * @return bool True if item exists in the cache, false otherwise.
      */
-    public function hasItem($key)
+    public function hasItem(string $key)
     {
         if (isset($this->data[$key])) {
             
@@ -118,7 +118,7 @@ final class NullCacheItemPool implements CacheItemPoolInterface
      *        
      * @return bool True if the item was successfully removed. False if there was an error.
      */
-    public function deleteItem($key)
+    public function deleteItem(string $key)
     {
         unset($this->data[$key]);
         
