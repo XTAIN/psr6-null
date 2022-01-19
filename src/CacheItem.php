@@ -1,5 +1,5 @@
 <?php
-namespace Psr6NullCache;
+namespace XTAIN\Psr\Cache;
 
 use Psr\Cache\CacheItemInterface;
 use DateTimeInterface;
