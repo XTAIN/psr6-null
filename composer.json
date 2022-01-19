@@ -1,5 +1,5 @@
 {
-    "name": "thadafinser/psr6-null-cache",
+    "name": "xtain/psr6-null",
     "description": "PSR-6 cache NullObject implementation, to avoid null checks and for testing",
     
     "license": "MIT",
@@ -8,24 +8,27 @@
         {
             "name": "Martin Keckeis",
             "email": "martin.keckeis1@gmail.com"
+        },
+        {
+            "name": "Maximilian Ruta",
+            "email": "mruta@xtain.net"
         }
     ],
     
     "autoload": {
         "psr-4": {
-            "Psr6NullCache\\":  "src"
+            "XTAIN\\Psr\\Cache\\":  "src"
         }
     },
     
     "autoload-dev": {
         "psr-4": {
-            "Psr6NullCacheTest\\Unit\\":  "tests/unit"
+            "XTAIN\\Test\\Psr\\Cache\\Unit\\":  "tests/unit"
         }
     },
     
     "require": {
-        "php": "~7.0",
-        
+        "php": ">=7.0",
         "psr/cache": "^1.0"
     },
     
