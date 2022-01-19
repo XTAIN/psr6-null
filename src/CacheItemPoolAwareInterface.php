@@ -9,5 +9,5 @@ interface CacheItemPoolAwareInterface
     /**
      * @param CacheItemPoolInterface $cache
      */
-    public function setCachePool(CacheItemPoolInterface $cache);
+    public function setCachePool(CacheItemPoolInterface $cache) : void;
 }
